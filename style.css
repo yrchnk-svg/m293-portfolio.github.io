@@ -1,0 +1,753 @@
+/* ------------------------------------------ */
+/* ---- Standardfarben und -schriftarten ---- */
+/* ------------------------------------------ */
+:root {
+    --color-bg: #EDDFD5;
+    --color-primary: #B85C48;
+    --color-primary-darker: #A03D27;
+    --color-secondary: #AD7C59;
+    --color-beige: #D4B4A1;
+    --color-accent: #80221E;
+    --color-text: #544744;
+    --color-whiter: #F5EFEB;
+    --rgba-color-primary: 184, 92, 72;
+    --rgba-color-accent: 128, 34, 30;
+}
+
+a, p, li, label, input, textarea, ::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3em;
+    text-decoration: none;
+    color: var(--color-text);
+}
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.8em;
+    font-weight: 900;
+    line-height: 1.1em;
+}
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+}
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+/* ------------------------------------------ */
+/* ------------- Standardlayout ------------- */
+/* ------------------------------------------ */
+body {
+    background-color: var(--color-bg);
+    padding: 1% 5%;
+    margin: 0;
+}
+#main-content {
+    padding: 1% 10%;
+}
+
+/* ----------------- Header ----------------- */
+header {
+    margin-bottom: 2%;
+}
+#main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10% 1% 10%;
+}
+#main-nav a {
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+#main-nav a:hover {
+    color: var(--color-primary-darker);
+    transition: 0.25s;
+}
+.website-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+}
+.website-nav a:not(:last-child) {
+    padding-right: 2.5%;
+}
+
+/* Kontaktnavigation - Icons */
+.contact-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 10%;
+}
+#main-nav .fa-phone {
+    padding: 9.5px;
+}
+#main-nav .fa-envelope, #main-nav .fa-linkedin-in {
+    font-size: 20px;
+    padding: 9px;
+}
+#main-nav .fa-linkedin-in {
+    padding: 9px 10.25px;
+}
+#main-nav .contact-nav i {
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+}
+#main-nav .contact-nav i:hover {
+    background-color: var(--color-primary-darker);
+    transition: 0.25s;
+    transform: scale(1.1);
+}
+.contact-nav a:not(:last-child) {
+    padding-right: 8.5%;
+}
+
+/*  Unterkante  */
+.nav-border {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* Mobile Navigation */
+#mobile-nav {
+    display: none;
+}
+
+/* ------ Footer mit einem Hintergrund ------ */
+.bg-wave {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    bottom: 0%;
+    z-index: -10;
+}
+.bg-wave img {
+    display: block;
+}
+
+/* ------------------------------------------ */
+/* ---------------- Homepage ---------------- */
+/* ------------------------------------------ */
+#homepage #main-content {
+    padding: 0.5% 8%;
+}
+.homepage-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4vh;
+}
+.homepage-img {
+    width: 45%;
+}
+.homepage-img img {
+    width: 80%;
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.2));
+}
+.homepage-img img:hover {
+    transform: scale(1.01);
+    transition: 0.25s;
+}
+.homepage-text-block {
+    display: grid;
+    grid-template-rows: 25% 40% 25%;
+    gap: 4%;
+    width: 55%;
+}
+.homepage-text-block h1 {
+    align-self: end;
+    margin: 0 0 -1% 0;
+    color: var(--color-primary);
+}
+.homepage-text-block h1 span {
+    color: var(--color-accent);
+}
+.homepage-text-block p {
+    align-self: center;
+}
+.homepage-text-block a {
+    width: fit-content;
+    align-self: start;
+    margin-top: 0.5%;
+    padding: 1.4% 3.2%;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+}
+.homepage-text-block a:hover {
+    background-color: var(--color-primary-darker);
+    transition: 0.25s;
+}
+
+/* ------------------------------------------ */
+/* --------------- Über mich ---------------- */
+/* ------------------------------------------ */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8%;
+    margin-top: 2.5%;
+}
+.about-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-text h2 {
+    color: var(--color-primary-darker);
+    margin: 0 0 1% 0;
+}
+.about-img {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-img img {
+    box-sizing: border-box;
+    width: 100%;
+    border: 8px solid var(--color-primary) !important;
+    border-radius: 32px;
+    filter: drop-shadow(0 0 1.4rem rgba(var(--rgba-color-primary), 0.25));
+}
+
+/* ------------------------------------------ */
+/* -------------- Fähigkeiten --------------- */
+/* ------------------------------------------ */
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5%;
+}
+.skills-container h3 {
+    color: var(--color-primary-darker);
+    margin-bottom: 2.5%;
+}
+.skills-container ul {
+    margin-top: 0;
+}
+/*  "Ich habe Erfahrung mit..."  */
+.experience {
+    width: 55%;
+}
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    gap: 4.5% 3%; 
+}
+.exp-grid img {
+    width: 70%;
+    padding: 15%;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+}
+.exp-grid img:hover {
+    transform: scale(1.01);
+    transition: 0.25s;
+}
+.exp-img-1 {
+    background-color: var(--color-primary);
+}
+.exp-img-2 {
+    background-color: var(--color-secondary);
+}
+.exp-img-3 {
+    background-color: var(--color-beige);
+}
+/*  "Ich bin... / Ich habe..." */
+.characteristic {
+    width: 45%;
+}
+.characteristic h3 {
+    margin-bottom: 2%;
+}
+
+/* ------------------------------------------ */
+/* --------------- Portfolio ---------------- */
+/* ------------------------------------------ */
+#portfolio {
+    padding-bottom: 7.5%;
+    background-image: url("img/bg/bg-pc-wave-smaller.svg");
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    background-position: right bottom;
+}
+.portfolio-container h2 {
+    color: var(--color-primary-darker);
+    margin-bottom: 1%;
+}
+/*  "Meine Projekte"-Raster  */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4% 7.5%;
+}
+.project > * {
+    margin: 1.5% 0;
+}
+.project-title {
+    color: var(--color-primary);
+    align-self: end;
+}
+.project-img {
+    width: 100%;
+    height: auto;
+    max-width: 1160px;
+    max-height: 475px;
+    object-fit: cover;
+    align-self: center;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+}
+.project-img:hover {
+    transform: scale(1.025);
+    transition: 0.25s;
+}
+/*  "Websites mit WordPress"-Container  */
+.portfolio-website-container {
+    margin-top: 7.5%;
+}
+
+/* ------------------------------------------ */
+/* ---------------- Kontakt ----------------- */
+/* ------------------------------------------ */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 0;
+}
+/*  Kontaktinfos - Titel, Telefonnummer, E-Mail  */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info > * {
+    margin: 1% 0;
+}
+.contact-info h2 {
+    color: var(--color-primary-darker);
+    margin-bottom: 4%;
+}
+.contact-info i {
+    color: var(--color-primary-darker);
+}
+.contact-info a:hover {
+    color: var(--color-accent);
+    transition: 0.25s;
+}
+/*  Kontaktformular  */
+.contact-formular {
+    width: 60%;
+}
+.contact-formular form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2.5%;
+}
+.contact-formular form label {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 0.75%;
+}
+.contact-formular form label:not(:first-child) {
+    margin-top: 2.5%;
+}
+.contact-formular form input:not(input[type=submit]), .contact-formular form textarea {
+    padding: 1%;
+    border: 2.5px solid var(--color-primary);
+    border-radius: 12px;
+    background-color: var(--color-whiter);
+}
+.required:after {
+    content: "*";
+    color: var(--color-primary);
+}
+::placeholder {
+    color: rgba(var(--rgba-color-primary), 0.5);
+}
+.contact-formular form input[type=submit] {
+    margin-top: 2.5%;
+    padding: 1.4% 3.6%;
+    width: fit-content;
+    align-self: center;
+    background-color: var(--color-primary);
+    color: var(--color-whiter);
+    font-size: 1.2em;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+}
+.contact-formular form input[type=submit]:hover {
+    background-color: var(--color-primary-darker);
+    transform: scale(1.025);
+    transition: 0.25s; 
+    cursor: pointer;
+}
+
+/* ------------------------------------------ */
+/* --------------- Responsive --------------- */
+/* ------------------------------------------ */
+/*  Laptop  */
+@media (max-width: 1560px) {
+    /* Homepage */
+    #homepage #main-content {
+        padding: 1.5% 7.5%;
+    }
+    .homepage-container {
+        margin-top: 5vh;
+    }
+    .homepage-img img {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1440px) {
+    body {
+        padding: 1% 5%;
+    }
+    #main-content {
+        padding: 0% 7.5%;
+    }
+
+    /* Header */
+    #main-nav {
+        padding: 0 7.5% 1% 7.5%;
+    }
+    .website-nav a:not(:last-child) {
+        padding-right: 3.5%;
+    }
+
+    /* Homepage */
+    #homepage #main-content {
+        padding: 1.5% 7.5%;
+    }
+    .homepage-img img {
+        width: 90%;
+    }
+    .homepage-text-block a {
+        padding: 2% 5%;
+    }
+
+    /* Kontakt */
+    .contact-formular form input:not(input[type=submit]), .contact-formular form textarea {
+        padding: 1.5%;
+    }
+}
+
+@media (max-width: 1280px) {
+    body {
+        padding: 1.25% 3.5%;
+    }
+    #main-content {
+        padding: 0% 5%;
+    }
+    /* Header */
+    #main-nav {
+        padding: 0 5% 1% 5%;
+    }
+    /* -------------- Homepage -------------- */
+    #homepage #main-content {
+        padding: 1.5% 5%;
+    }
+    .homepage-container {
+        margin-top: 7.5vh;
+    }
+    .homepage-img img {
+        width: 90%;
+    }
+}
+
+/*  Tablet  */
+@media (max-width: 1070px) {
+    /* Standardfarben und -schriftarten */
+    a, p, li, label, input, textarea, ::placeholder {
+        font-size: 16px;
+        line-height: 1.3em;
+    }
+    h1 {
+        font-size: 2.2em;
+        line-height: 1.1em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+
+    /* Standardlayout */
+    #main-content {
+        padding: 0% 2.5%;
+    }
+
+    /* Header */
+    #main-nav, .nav-border {
+        display: none;
+    }
+
+    /* Mobile Header */
+    #mobile-nav {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: -1.5% 0 0 -3.75%;
+        width: calc(100% + 7.5%);
+        height: 7.5vh;
+        background-color: var(--color-primary);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+    }
+    #check {
+        display: none;
+    }
+    #check:checked ~ .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.25s;
+    }
+    .mobile-nav-toggle {
+        margin-right: 24px;
+        color: var(--color-bg);
+        font-size: 1.5em;
+        z-index: 100;
+        cursor: pointer;
+    }
+    .mobile-nav-toggle:hover {
+        color: var(--color-whiter);
+        transform: scale(1.05);
+        transition: 0.25s;
+    }
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        box-sizing: border-box;
+        width: 40%;
+        height: calc(101vh - 7.4vh);
+        padding: 0.5% 5% 4% 5%;
+        top: 7.25vh;
+        z-index: 99;
+        background-color: var(--color-primary);
+        box-shadow: 0px 20px 250px 0px rgba(var(--rgba-color-accent), 0.5) inset;
+    }
+    .mobile-menu ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .mobile-menu li a {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: var(--color-bg);
+        line-height: 2em;
+    }
+    .mobile-menu li a:hover {
+        color: var(--color-whiter);
+        transition: 0.25s;
+    }
+    .mobile-contact-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+    }
+    .mobile-contact-nav .fa-phone {
+        padding: 9.5px;
+    }
+    .mobile-contact-nav .fa-envelope, .mobile-contact-nav .fa-linkedin-in {
+        padding: 9px;
+    }
+    .mobile-contact-nav .fa-linkedin-in {
+        padding: 9px 10.25px;
+    }
+    .mobile-contact-nav i {
+        font-size: 1.2em;
+        color: var(--color-primary);
+        background-color: var(--color-bg);
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2)
+    }
+    .mobile-contact-nav i:hover {
+        background-color: var(--color-whiter);
+        transition: 0.25s;
+        transform: scale(1.1);
+    }
+
+    /* -------------- Homepage -------------- */
+    #homepage #main-content {
+        padding: 1.5% 3.5%;
+    }
+    .homepage-container {
+        margin-top: 10vh;
+    }
+    .homepage-img img {
+        width: 95%;
+    }
+}
+@media (max-width: 768px) {
+    /* Standardfarben und -schriftarten */
+    a, p, li, label, input, textarea, ::placeholder {
+        font-size: 15px;
+        line-height: 1.4em;
+    }
+    h1 {
+        font-size: 1.9em;
+        line-height: 1.1em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    h3 {
+        font-size: 1.4em;
+    }
+
+    /* Standardlayout */
+    body {
+        padding: 1.5% 2.5%;
+    }
+    #main-content {
+        padding: 2.5% 2.5% 2.5% 2.5%;
+    }
+
+    /* Mobile Header */
+    #mobile-nav {
+        margin: -1.75% 0 0 -5%;
+        width: calc(100% + 7.75%);
+        height: 6.5vh;
+    }
+    .mobile-menu {
+        width: 55%;
+        top: 6.5vh;
+        height: calc(101vh - 7.25vh);
+    }
+    .mobile-menu li a {
+        font-size: 1.2em;
+    }
+
+    /* Footer */
+    .bg-wave {
+        display: none;
+    }
+
+    /* -------------- Homepage -------------- */
+     #homepage #main-content {
+        padding: 2.5% 10%;
+    }
+    .homepage-container {
+        flex-direction: column-reverse;
+        gap: 3vh;
+        margin-top: 0;
+    }
+    .homepage-text-block {
+        width: 100%;
+        gap: 2.5vh;
+    }
+    .homepage-text-block h1, .homepage-text-block p {
+        text-align: center;
+    }
+    .homepage-text-block p {
+        margin: 0;
+    }
+    .homepage-text-block a {
+        justify-self: center;
+    }
+    .homepage-img {
+        width: 85%;
+    }
+    .homepage-img img {
+        width: 100%;
+    }
+
+    /* ------------- Über mich -------------- */
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+    .about-text {
+        width: 100%;
+    }
+    .about-img {
+        width: 100%;
+    }
+
+    /* ------------ Fähigkeiten-------------  */
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+    }
+    .skills-container h3 {
+        margin-top: 0;
+    }
+    .experience {
+        width: 100%;
+    }
+    .exp-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .characteristic {
+        width: 100%;
+    }
+}
+/*  Mobile  */
+@media (max-width: 480px) {
+    /* Standardfarben und -schriftarten */
+    h1 {
+        font-size: 1.75em;
+        line-height: 1em;
+    }
+    
+    /* Standardlayout */
+    body {
+        padding: 1.5% 2.5%;
+    }
+    #main-content {
+        padding: 2.5% 4% 5% 4%;
+    }
+
+    /* Mobile Header */
+    .mobile-menu {
+        width: 101%;
+        padding: 7.5%;
+        background-color: var(--color-primary);
+    }
+    .mobile-menu li {
+        text-align: center;
+    }
+    .mobile-contact-nav {
+        justify-content: center;
+    }
+
+    /* -------------- Homepage -------------- */ 
+    #homepage #main-content {
+        padding: 3.5% 4%;
+    }  
+    .homepage-img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1a63dc0f96.js" crossorigin="anonymous"></script>
+    <title>Kontakt</title>
+</head>
+<body>
+    <header>
+        <div id="main-nav">
+            <div class="website-nav">
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                <a href="about.html">Über mich</a>
+                <a href="skills.html">Fähigkeiten</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Kontaktieren Sie mich</a>
+            </div>
+            <div class="contact-nav">
+                <a href="tel:+41796360692"><i class="fa-solid fa-phone"></i></a>
+                <a href="mailto:yrchnk.svg@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/nataliia-yurchenko/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="nav-border"></div>
+        <div id="mobile-nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="about.html">Über mich</a></li>
+                    <li><a href="skills.html">Fähigkeiten</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Kontaktieren Sie mich</a></li>
+                </ul>
+                <div class="mobile-contact-nav">
+                    <a href="tel:+41796360692"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:yrchnk.svg@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/nataliia-yurchenko/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main-content">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Kontaktieren Sie mich</h2>
+                <p><i class="fa-solid fa-phone"></i> &ensp; <a href="tel:+41796360692">+ 41 79 636 06 92</a></p>
+                <p><i class="fa-solid fa-envelope"></i> &ensp; <a href="mailto:yrchnk.svg@gmail.com">yrchnk.svg@gmail.com</a></p>
+            </div>
+            <div class="contact-formular">
+                <form>
+                    <label for="name" class="required">Name, Vorname</label>
+                    <input type="text" id="name" placeholder="Max Mustermann">
+    
+                    <label for="email" class="required">E-Mail</label>
+                    <input type="email" id="email" placeholder="muster.email@outlook.com">
+    
+                    <label for="tnumber">Telefonnummer</label>
+                    <input type="tel" id="tnumber" placeholder="0791234567">
+    
+                    <label for="subject" class="required">Betreff</label>
+                    <input type="text" id="subject" placeholder="Betreff">
+    
+                    <label for="message">Nachricht</label>
+                    <textarea name="message" rows="5" placeholder="Geben Sie Ihre Nachricht ein..."></textarea>
+    
+                    <input type="submit" value="Absenden">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
