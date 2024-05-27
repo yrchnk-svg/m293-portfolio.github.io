@@ -715,7 +715,7 @@ body {
     }
     .homepage-text-block {
         width: 100%;
-        gap: 1.4em;
+        gap: 1em;
     }
     .homepage-text-block h1, .homepage-text-block p {
         text-align: center;
@@ -808,6 +808,9 @@ body {
     #homepage #main-content {
         padding: 3.5% 4%;
     }  
+    .homepage-text-block {
+        gap: 50em;
+    }
     .homepage-img {
         width: 100%;
     }
