@@ -710,12 +710,12 @@ body {
     }
     .homepage-container {
         flex-direction: column-reverse;
-        gap: 2.5em;
+        gap: 2em;
         margin-top: 0;
     }
     .homepage-text-block {
         width: 100%;
-        gap: 50em;
+        gap: 5%;
     }
     .homepage-text-block h1, .homepage-text-block p {
         text-align: center;
@@ -808,9 +808,6 @@ body {
     #homepage #main-content {
         padding: 3.5% 4%;
     }  
-    .homepage-text-block {
-        gap: 5%;
-    }
     .homepage-img {
         width: 100%;
     }
