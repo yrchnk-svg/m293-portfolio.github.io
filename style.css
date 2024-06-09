@@ -302,6 +302,7 @@ body {
 .project-title {
     color: var(--color-primary);
     align-self: end;
+    font-size: 1.5em;
 }
 .project-img {
     width: 100%;
@@ -320,6 +321,9 @@ body {
 /*  "Websites mit WordPress"-Container  */
 .portfolio-website-container {
     margin-top: 7.5%;
+}
+.portfolio-website-container h3 {
+    font-size: 1.4em;
 }
 
 /* ------------------------------------------ */
@@ -514,6 +518,16 @@ body {
     }
     .homepage-img img {
         width: 90%;
+    }
+}
+
+@media (max-width: 1208px) and (min-width: 948px) {
+    /* ------------- Portfolio ------------- */
+    .portfolio-container h2 {
+        margin-bottom: 0;
+    }
+    .project-win h3 {
+        margin: 0.85em 0;
     }
 }
 
@@ -833,6 +847,9 @@ body {
         display: flex;
         flex-direction: column;
         gap: 2.5em;
+    }
+    .portfolio-container h3 {
+        font-size: 1.3em;
     }
 
     /* --------------- Kontakt --------------  */
