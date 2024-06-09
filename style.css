@@ -752,6 +752,9 @@ body {
     .mobile-contact-nav {
         justify-content: center;
     }
+    .mobile-contact-nav i {
+        font-size: 1.5em;
+    }
 
     /* Footer */
     .bg-wave {
@@ -884,7 +887,7 @@ body {
     .mobile-menu {
         width: 110%;
         padding: 7.5%;
-        padding-bottom: 25%;
+        padding-bottom: 8em;
         background-color: var(--color-primary);
     }
     .mobile-menu li {
