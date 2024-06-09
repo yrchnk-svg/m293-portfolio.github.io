@@ -46,8 +46,6 @@ body {
     background-color: var(--color-bg);
     padding: 1% 5%;
     margin: 0;
-    /* REMOVE LATER */
-    scrollbar-width: none;
 }
 #main-content {
     padding: 1% 10%;
@@ -725,7 +723,7 @@ body {
         padding: 1.5% 2.5%;
     }
     #main-content {
-        padding: 0.5% 2.5% 2.5% 2.5%;
+        padding: 2.5% 2.5% 2.5% 2.5%;
     }
     .hidden {
         display: none !important;
@@ -818,9 +816,39 @@ body {
     }
     .exp-grid {
         grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 7.5%;
     }
     .characteristic {
         width: 100%;
+    }
+
+    /* -------------- Portfolio -------------- */
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5em;
+    }
+
+    /* --------------- Kontakt --------------  */
+    .contact-info {
+        text-align: center;
+    }
+    .contact-info i {
+        margin-right: -1%;
+    }
+    /* Kontaktformular */
+    .contact-formular {
+        width: 100%;
+    }
+    .contact-formular form label:not(:first-child) {
+        margin-top: 3%;
+    }
+    .contact-formular form input:not(input[type=submit]), .contact-formular textarea {
+        padding: 1.5% 3%;
+    }
+    .contact-formular form input[type=submit] {
+        margin-top: 4%;
+        padding: 2% 5%;
     }
 
     /* -------- Kontakt-Weiterleitung -------  */
