@@ -759,7 +759,7 @@ body {
         margin-top: 1em;
     }
     .homepage-text-block {
-        grid-template-rows: 25% 50% 25%;
+        grid-template-rows: 10% 80% 10%;
         width: 100%;
         gap: 5%;
     }
