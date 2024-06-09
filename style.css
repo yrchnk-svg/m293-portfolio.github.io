@@ -161,25 +161,20 @@ body {
     transition: 0.25s;
 }
 .homepage-text-block {
-    display: grid;
-    grid-template-rows: 25% 40% 25%;
-    gap: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
     width: 55%;
 }
 .homepage-text-block h1 {
-    align-self: end;
     margin: 0 0 -1% 0;
     color: var(--color-primary);
 }
 .homepage-text-block h1 span {
     color: var(--color-accent);
 }
-.homepage-text-block p {
-    align-self: center;
-}
 .homepage-text-block a {
     width: fit-content;
-    align-self: start;
     margin-top: 0.5%;
     padding: 1.4% 3.2%;
     text-decoration: none;
@@ -452,12 +447,9 @@ body {
 
 /* ----------------- Laptop ----------------- */
 @media (max-width: 1560px) {
-    /* Homepage */
+    /* -------------- Homepage -------------- */
     #homepage #main-content {
         padding: 1.5% 7.5%;
-    }
-    .homepage-container {
-        margin-top: 5vh;
     }
     .homepage-img img {
         width: 85%;
@@ -480,7 +472,7 @@ body {
         padding-right: 3.5%;
     }
 
-    /* Homepage */
+    /* -------------- Homepage -------------- */
     #homepage #main-content {
         padding: 1.5% 7.5%;
     }
@@ -491,7 +483,15 @@ body {
         padding: 2% 5%;
     }
 
-    /* Kontakt */
+    /* ------------ Fähigkeiten ------------- */
+    .experience {
+        width: 50%;
+    }
+    .characteristic {
+        width: 50%;
+    }
+
+    /* --------------- Kontakt -------------- */
     .contact-formular form input:not(input[type=submit]), .contact-formular form textarea {
         padding: 1.5%;
     }
@@ -511,9 +511,6 @@ body {
     /* -------------- Homepage -------------- */
     #homepage #main-content {
         padding: 1.5% 5%;
-    }
-    .homepage-container {
-        margin-top: 7.5vh;
     }
     .homepage-img img {
         width: 90%;
@@ -540,7 +537,7 @@ body {
 
     /* Standardlayout */
     #main-content {
-        margin-top: 8%;
+        margin-top: 6%;
         padding: 0% 2.5%;
     }
 
@@ -679,11 +676,16 @@ body {
     #homepage #main-content {
         padding: 1.5% 3.5%;
     }
-    .homepage-container {
-        margin-top: 10vh;
-    }
     .homepage-img img {
         width: 95%;
+    }
+
+    /* ------------ Fähigkeiten ------------- */
+    .experience {
+        width: 60%;
+    }
+    .characteristic {
+        width: 40%;
     }
 }
 
@@ -704,7 +706,7 @@ body {
 @media (max-width: 768px) {
     /* Standardfarben und -schriftarten */
     a, p, li, label, input, textarea, ::placeholder {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1.4em;
     }
     h1 {
@@ -771,9 +773,10 @@ body {
         margin-top: 1em;
     }
     .homepage-text-block {
-        grid-template-rows: 15% 70% 15%;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
         width: 100%;
-        gap: 5%;
     }
     .homepage-text-block h1, .homepage-text-block p {
         text-align: center;
@@ -782,7 +785,7 @@ body {
         margin: 0;
     }
     .homepage-text-block a {
-        justify-self: center;
+        padding: 1.5% 4%;
     }
     .homepage-img {
         width: 85%;
@@ -887,7 +890,7 @@ body {
     .mobile-menu {
         width: 110%;
         padding: 7.5%;
-        padding-bottom: 8em;
+        padding-bottom: 10em;
         background-color: var(--color-primary);
     }
     .mobile-menu li {
@@ -901,6 +904,9 @@ body {
     #homepage #main-content {
         padding: 3.5% 4%;
     }  
+    .homepage-text-block a {
+        padding: 2% 5%;
+    }
     .homepage-img {
         width: 100%;
     }
